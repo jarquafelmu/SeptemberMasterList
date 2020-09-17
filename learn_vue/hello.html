@@ -17,7 +17,7 @@
                     <label for="email">Email</label>
                     <input type="email" v-model='email' class="form-control form-control-lg">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" v-on:click.prevent='process' class="btn btn-primary">Submit</button>
             </form>
         </div>
     </div>
@@ -29,6 +29,11 @@
             el: '#app',
             data: {
                 email: 'mike@example.com'
+            },
+            methods: {
+                process: function (event) {
+                    alert(`Submitted ${this.email}`);
+                }
             }
         })
     </script>
