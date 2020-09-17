@@ -12,13 +12,14 @@
 <body>
     <div id="app">
         <div class="container">
-            <form action="" class="mt-5">
+            <form v-if="!submitted" class="mt-5">
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" v-model='email' class="form-control form-control-lg">
                 </div>
                 <button type="submit" @click.prevent='process' class="btn btn-primary">Submit</button>
             </form>
+            <h2 v-if="submitted" class="mt-5">Thanks for signing up!</h2>
         </div>
     </div>
 
@@ -28,11 +29,13 @@
         let vm = new Vue({
             el: '#app',
             data: {
-                email: 'mike@example.com'
+                email: 'mike@example.com',
+                submitted: false
             },
             methods: {
                 process: function (event) {
-                    alert(`Submitted ${this.email}`);
+                    // alert(`Submitted ${this.email}`);
+                    this.submitted = true;
                 }
             }
         })
