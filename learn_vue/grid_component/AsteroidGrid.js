@@ -20,7 +20,8 @@ Vue.component('asteroid-grid', {
             var sortedNeos = simpleNeos.sort(function (a, b) {
                 return a.miles - b.miles;
             });
-            return sortedNeos[0].name;
+            if (sortedNeos.length) return sortedNeos[0].name;
+            return null;
         }
     },
     methods: {
@@ -31,7 +32,7 @@ Vue.component('asteroid-grid', {
             return 'N/A';
         },
         remove: function (index) {
-            this.asteroids.splice(index, 1);
+            this.$emit('remove', index);
         },
         getRowStyle: function (a) {
             if (a.close_approach_data.length == 0) {
@@ -50,7 +51,7 @@ Vue.component('asteroid-grid', {
                     <transition name="shooting-star"> \
                         <div class="mt-3 ml-3" v-cloak v-if="numAsteroids > 0 && showSummary"> \
                             <p>showing {{numAsteroids}} items</p> \
-                            <p>{{closestObject}} has the smallest miss distance.</p> \
+                            <p v-if="closestObject">{{closestObject}} has the smallest miss distance.</p> \
                         </div> \
                     </transition> \
                     <div class="m-3"> \
