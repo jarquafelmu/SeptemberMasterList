@@ -1,7 +1,7 @@
 # SeptemberMasterList
 A master list checkin on spikes completed for cs4690
 
-### Check List
+## Check List
 
 * [x] Get in the class channel on Discord. (only 1 in 5 of you are in the channel)
   * [x] Create discord user. (You can use whatever you want for your user name/handle/alias)
@@ -30,7 +30,7 @@ A master list checkin on spikes completed for cs4690
   * [ ] Submit whatever shows you did the work.
 
 
-### ESPikes Checklist
+## ESPikes Checklist
 * [ ] Favicon
 * [ ] Do Shake
   * [ ] Get shake.js
@@ -58,7 +58,7 @@ A master list checkin on spikes completed for cs4690
   * svg?
 * [ ] do project in vue
 
-#### checklist 0: spike solution
+### checklist 0: spike solution
 * [ ] gray background
 * [ ] block of black
   * [ ] white writing
