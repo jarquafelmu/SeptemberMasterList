@@ -7,12 +7,31 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
     <div id="app">
         <div class="container">
-
+            <div class="card mt-5">
+                <h2 class="card-header">Near-Earth Objects</h2>
+                <table class="table">
+                    <thead class="thead-light">
+                        <th>Name</th>
+                        <th>Close Approach Date</th>
+                    </thead>
+                    <tbody v-cloak>
+                        <tr v-for='a of asteroids'>
+                            <td>{{a.name}}</td>
+                            <td>{{getCloseApproachDate(a)}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
@@ -39,6 +58,12 @@
                             vm.asteroids = res.data.near_earth_objects.slice(0, 10);
                             // console.log(res);
                         });
+                },
+                getCloseApproachDate: function (a) {
+                    if (a.close_approach_data.length) {
+                        return a.close_approach_data[0].close_approach_date;
+                    }
+                    return 'N/A';
                 }
             }
         })
