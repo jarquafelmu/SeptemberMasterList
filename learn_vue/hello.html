@@ -17,34 +17,57 @@
 <body>
     <div id="app">
         <div class="container">
-            <another-component></another-component>
-            <my-component v-for="i in 1000"></my-component>
+            <a-pod date="2018-08-07"></a-pod>
+            <a-pod></a-pod>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
-        const anotherComponent = {
+        // W3C Rules: use a hyphen in a custom tag
+        Vue.component('a-pod', {
+            template: `<div> \
+                        <img :src="imgSrc" :title="imgTitle"> \
+                        <p>{{ date || "today"}}</p> \
+                      </div>`,
+            props: ['date'],
             data: function () {
                 return {
-                    msg: 'Hello from another component!'
-                }
+                    imgSrc: '',
+                    imgTitle: ''
+                };
             },
-            template: '<h1>{{msg}}</h1>'
-        }
+            created: function () {
+                this.fetchApod();
+            },
+            methods: {
+                fetchApod: function () {
+                    const apiKey = 'RHbXhHg7gThUJPxG1SfUxlb0k1BYQz2in45a9RGp';
+                    const apiAttribute = `api_key=${apiKey}`;
 
-        // W3C Rules: use a hyphen in a custom tag
-        Vue.component('my-component', {
-            template: '<strong>A static element...</strong>'
+                    const baseURL = 'https://api.nasa.gov/planetary/apod?';
+
+                    let url = `${baseURL}${apiAttribute}`;
+                    if (this.date) {
+                        url = `${url}&date=${this.date}`;
+                    }
+                    console.log(url);
+
+                    const self = this;
+
+                    axios.get(url)
+                        .then(function (res) {
+                            self.imgSrc = res.data.url;
+                            self.imgTitle = res.data.title;
+                        });
+                }
+            }
         })
 
         // vm = viewmodel
         const vm = new Vue({
-            el: '#app',
-            components: {
-                'another-component': anotherComponent
-            }
+            el: '#app'
         })
     </script>
 </body>
