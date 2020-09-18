@@ -29,6 +29,28 @@ A master list checkin on spikes completed for cs4690
   * [ ] Submit Checklist1 with everything checked.
   * [ ] Submit whatever shows you did the work.
 
+## Checklist 1: Vue - intro
+* [ ] get wag's style
+* [ ] make the mentor / tech lead / customer / etc... as a pulldown
+* [ ] hero title to the right of the img will have a tool tip which will have teh vocal cues
+
+### checklist 2: spike solution
+* [ ] gray background
+* [ ] block of black
+  * [ ] white writing
+  * [ ] icon to click on
+    * [ ] swap colors with other block
+* [ ] block of white
+  * [ ] black writing
+  * [ ] icon to click on
+    * [ ] swap colors with other block
+
+(light colors become dark and dark colors become light)
+
+* [ ] three buttons on page
+  * [ ] shake light block
+  * [ ] shake dark block
+  * [ ] shake whole page
 
 ## ESPikes Checklist
 * [ ] Favicon
@@ -57,21 +79,3 @@ A master list checkin on spikes completed for cs4690
   * png
   * svg?
 * [ ] do project in vue
-
-### checklist 0: spike solution
-* [ ] gray background
-* [ ] block of black
-  * [ ] white writing
-  * [ ] icon to click on
-    * [ ] swap colors with other block
-* [ ] block of white
-  * [ ] black writing
-  * [ ] icon to click on
-    * [ ] swap colors with other block
-
-(light colors become dark and dark colors become light)
-
-* [ ] three buttons on page
-  * [ ] shake light block
-  * [ ] shake dark block
-  * [ ] shake whole page
