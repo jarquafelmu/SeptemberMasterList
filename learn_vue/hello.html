@@ -7,40 +7,38 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <style>
-        [v-cloak] {
-            display: none;
-        }
-    </style>
 </head>
 
 <body>
     <div id="app">
         <div class="container">
-            <form v-show="!submitted" class="mt-5">
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" v-model='email' class="form-control form-control-lg">
-                </div>
-                <button type="submit" @click.prevent='process' class="btn btn-primary">Submit</button>
-            </form>
-            <h2 v-show='submitted' v-cloak class="mt-5">Thanks for signing up!</h2>
+
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
         // vm = viewmodel
         let vm = new Vue({
             el: '#app',
             data: {
-                email: 'mike@example.com',
-                submitted: false
+                asteroids: []
+            },
+            created: function () {
+                this.fetchAsteroids();
             },
             methods: {
-                process: function (event) {
-                    // alert(`Submitted ${this.email}`);
-                    this.submitted = true;
+                fetchAsteroids: function (event) {
+                    const apiKey = 'RHbXhHg7gThUJPxG1SfUxlb0k1BYQz2in45a9RGp';
+                    const baseUrl = 'https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=';
+                    const url = `${baseUrl}${apiKey}`;
+
+                    axios.get(url)
+                        .then(function (res) {
+                            vm.asteroids = res.data.near_earth_objects.slice(0, 10);
+                            // console.log(res);
+                        });
                 }
             }
         })
