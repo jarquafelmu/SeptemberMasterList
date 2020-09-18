@@ -1,0 +1,12 @@
+NASA API
+
+Your API key for TheChaosElement@gmail.com is:
+RHbXhHg7gThUJPxG1SfUxlb0k1BYQz2in45a9RGp
+
+You can start using this key to make web service requests. Simply pass your key in the URL when making a web request. Here's an example:
+
+https://api.nasa.gov/planetary/apod?api_key=RHbXhHg7gThUJPxG1SfUxlb0k1BYQz2in45a9RGp
+
+For additional support, please contact us. When contacting us, please tell us what API you're accessing and provide the following account details so we can quickly find you:
+Account Email: TheChaosElement@gmail.com
+Account ID: 6f28a629-0209-41d4-b8f0-28543ac641fb
