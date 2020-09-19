@@ -1,20 +1,22 @@
 # checklist 2: spike solution
-* [ ] gray background
-* [ ] block of black
-  * [ ] white writing
-  * [ ] icon to click on
-    * [ ] swap colors with other block
-* [ ] block of white
-  * [ ] black writing
-  * [ ] icon to click on
-    * [ ] swap colors with other block
+* [x] gray background
+* [x] block of black
+  * [x] white writing
+  * [x] icon to click on
+    * [x] swap colors with other block
+* [x] block of white
+  * [x] black writing
+  * [x] icon to click ontjh
+    * [x] swap colors with other block
 
 (light colors become dark and dark colors become light)
 
-* [ ] three buttons on page
-  * [ ] shake light block
-  * [ ] shake dark block
-  * [ ] shake whole page
+* [x] three buttons on page
+  * [x] shake light block
+  * [x] shake dark block
+  * [x] shake whole page
+
+* [x] favicon
 
 ## ESPikes Checklist
 * [ ] Favicon
