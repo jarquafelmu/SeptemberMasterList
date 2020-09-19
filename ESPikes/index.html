@@ -89,9 +89,9 @@
             <div class="row">
                 <div class="col text-center">
                     <div class="btn-group" role="group" aria-label="shake buttons">
-                        <button @click="shake('light')" class="btn-info">Light</button>
-                        <button @click="shake('dark')" class="btn-info">Dark</button>
-                        <button @click="shake('app')" class="btn-info">Page</button>
+                        <button @click="shake('light')" class="btn btn-info">Light</button>
+                        <button @click="shake('dark')" class="btn btn-info">Dark</button>
+                        <button @click="shake('app')" class="btn btn-info">Page</button>
                     </div>
                 </div>
             </div>
@@ -116,7 +116,7 @@
                 shake: function (targetName) {
                     const target = document.querySelector(`#${targetName}`);
                     if (!target) return console.warning(`target was not found`);
-                    target.classList.add(vm.shakeClass)
+                    target.classList.add(vm.shakeClass);
                 }
             }
         });
@@ -125,7 +125,7 @@
         document.addEventListener('animationend', (event) => {
             const target = event.target;
             target.classList.remove(vm.shakeClass);
-        })
+        });
     </script>
 </body>
 
