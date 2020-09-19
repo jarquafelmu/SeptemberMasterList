@@ -28,8 +28,3 @@ A master list checkin on spikes completed for cs4690
 * [ ] Finish Checklist2
   * [ ] Submit Checklist1 with everything checked.
   * [ ] Submit whatever shows you did the work.
-
-## Checklist 1: Vue - intro
-* [ ] get wag's style
-* [ ] make the mentor / tech lead / customer / etc... as a pulldown
-* [ ] hero title to the right of the img will have a tool tip which will have teh vocal cues
