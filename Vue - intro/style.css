@@ -1,0 +1,11 @@
+[v-cloak] {
+    display: none;
+}
+
+.prompter-enter, .prompter-leave-to {
+    opacity: 0;
+}
+
+.prompter-enter-active, .prompter-leave-active {
+    transition: all 1s ease;
+}
