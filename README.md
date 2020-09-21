@@ -14,17 +14,17 @@ A master list checkin on spikes completed for cs4690
   * [x] Read what's what's out there.
   * [x] Participate.
 * [x] Do the Lynda course mentioned in #cs4690. (Do means do the exercises, not just watch.)
-  * [ ] Submit Checklist0 of the video list.
+  * [x] Submit Checklist0 of the video list.
 * [x] Watch video Vue - Intro
-  * [ ] Submit Checklist1 of what you were asked to do.
+  * [x] Submit Checklist1 of what you were asked to do.
 * [x] Watch video ESPikes
-  * [ ] Submit a Checklist2 of what you were asked to do.
-* [ ] Finish Checklist0.
-  * [ ] Submit Checklist0 with everything checked (or crossed off, or somehow marked done)
-  * [ ] Submit whatever shows you did the work.
-* [ ] Finish Checklist1.
+  * [x] Submit a Checklist2 of what you were asked to do.
+* [x] Finish Checklist0.
+  * [x] Submit Checklist0 with everything checked (or crossed off, or somehow marked done)
+  * [x] Submit whatever shows you did the work.
+* [x] Finish Checklist1.
   * [ ] Submit Checklist1 with everything checked
   * [ ] Submit whatever shows you did the work.
-* [ ] Finish Checklist2
+* [x] Finish Checklist2
   * [ ] Submit Checklist1 with everything checked.
   * [ ] Submit whatever shows you did the work.

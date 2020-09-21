@@ -2,10 +2,14 @@
     display: none;
 }
 
-.prompter-enter, .prompter-leave-to {
+.prompter-enter {
     opacity: 0;
 }
 
-.prompter-enter-active, .prompter-leave-active {
-    transition: all 1s ease;
+.prompter-enter-active {
+    transition: all 1s ease-in;
+}
+
+.img {
+    height: 400px;
 }

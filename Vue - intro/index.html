@@ -7,11 +7,11 @@
     <title>Vue-intro</title>
     <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
     <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
-    <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
-        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-4">
                 <div class="row">
-                    <select v-cloak class="custom-select bg-light" name="" id="roleSelector" v-model="selected">
+                    <select v-cloak class="custom-select bg-light" id="roleSelector" v-model="selected">
                         <option v-for="role of roles" :value="role.title ? role : ''" :disabled="!role.title">
                             {{role.title}}
                         </option>
@@ -30,12 +30,15 @@
             <div class="col">
                 <transition name="prompter">
                     <div class="card bg-secondary text-light rounded" v-if="selected" v-cloak>
-                        <div class="card-header display-4 bg-info" :title="generateTitle(selected)">{{selected.title}}</div>
+                        <div id="popover-target-1" class="card-header display-4 bg-info shadow-lg">
+                            {{selected.title}}
+                        </div>
+                        <b-popover target="popover-target-1" triggers="hover" placement="bottom" variant="primary">
+                            <template v-slot:title>Vocal Cues</template>
+                            <span v-for="cue of selected.cues">{{cue}}<br /></span>
+                        </b-popover>
                         <div class="card-body">
-                            <div>Cues</div>
-                            <ul>
-                                <li v-for="cue of selected.cues">{{cue}}</li>
-                            </ul>
+                            <img class="img" :src="selected.imgSrc" :alt="selected.title">
                         </div>
                     </div>
                 </transition>
@@ -44,8 +47,16 @@
     </div>
 
 
+    <!-- Load polyfills to support older browsers -->
+    <script src="//polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver"
+        crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- Load Vue followed by BootstrapVue -->
+    <script src="//unpkg.com/vue@latest/dist/vue.min.js"></script>
+    <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+
+    <!-- Load the following for BootstrapVueIcons support -->
+    <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
     <script src="script.js"></script>
 </body>
 

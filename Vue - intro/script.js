@@ -4,16 +4,11 @@ const vm = new Vue({
         selected: null,
         roles: [
             {},
-            { title: 'Customer', cues: ['female', 'high pitch'] },
-            { title: 'Tech Lead', cues: ['gruff', 'no nonsense'] },
-            { title: 'Mentor', cues: ['fatherly', 'loving'] },
-            { title: 'Narrator', cues: ['neutral', 'uninvolved'] },
-            { title: 'Teacher', cues: ['crazy', 'the full Wagstaff'] }
+            { title: 'Customer', cues: ['male', 'simmering temper'], imgSrc: 'assests/customer.jpg' },
+            { title: 'Tech Lead', cues: ['gruff', 'no nonsense'], imgSrc: 'assests/techlead.png' },
+            { title: 'Mentor', cues: ['fatherly', 'loving'], imgSrc: 'assests/mentor.jpg' },
+            { title: 'Narrator', cues: ['neutral', 'uninvolved'], imgSrc: 'assests/narrator.png' },
+            { title: 'Teacher', cues: ['crazy', 'the full Wagstaff'], imgSrc: 'assests/teacher.png' }
         ]
-    },
-    methods: {
-        generateTitle: function (selection) {
-            return `${selection.cues[0]}<br>${selection.cues[1]}`;
-        }
     }
 });
