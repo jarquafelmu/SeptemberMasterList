@@ -1,4 +1,4 @@
-# checklist 2: spike solution
+# checklist 2: ESPikes checklist
 * [x] gray background
 * [x] block of black
   * [x] white writing
@@ -18,7 +18,7 @@
 
 * [x] favicon
 
-## ESPikes Checklist
+## ESPCO2 (Eventually)
 * [ ] Favicon
 * [ ] Do Shake
   * [ ] Get shake.js
